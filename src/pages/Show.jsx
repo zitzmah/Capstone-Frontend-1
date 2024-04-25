@@ -1,4 +1,5 @@
 import { Link, Form, useLoaderData } from "react-router-dom"
+import StyledButton, { FancyButton } from '../components/Button/Button'
 
 export default function Show(props){
 
@@ -48,26 +49,18 @@ export default function Show(props){
                         <input type="text" id="antibodyID" name="antibodyID" defaultValue={aPatient.antibodyID}/>
                     </label>
 
-                    <button>Update Patient Information</button>
+                    <StyledButton>Update Patient Information</StyledButton>
                 </Form>
 
                 <Form action={`/delete/${id}/`} method="post">
-                    <button>Delete Patient Information</button>
+                    <StyledButton variant='outline'>Delete Patient Information</StyledButton>
                 </Form>
             </div>
 
             <Link to="/">
-                <button>Return to Home Page</button>
+                <FancyButton as='a'>Return to Home Page</FancyButton>
             </Link>
 
         </div>
     )
 }
-
-// name=models.CharField(max_length=100)
-//     dateOfBirth=models.DateField()
-//     sex=models.CharField(max_length=100)
-//     mrn=models.IntegerField()
-//     bloodType=models.CharField(max_length=3, default='')
-//     antibodyScreen=models.CharField(max_length=20, default='')
-//     antibodyID=models.CharField(max_length=50, default='')
