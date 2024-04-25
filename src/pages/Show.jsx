@@ -8,6 +8,9 @@ export default function Show(props){
 
     return(
         <div>
+            <div>
+                <Header/>
+            </div>
             <h1>{aPatient.name}</h1>
             <h2>{aPatient.dateOfBirth}</h2>
             <h2>{aPatient.mrn}</h2>

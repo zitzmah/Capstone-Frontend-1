@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 export const StyledButton=styled.button`
-    border: 2px solid #4caf50;
+    border: 2px solid #ff0500;
     background-color: ${(props) => 
-        props.variant === 'outline'? '#FFF' : '#4caf50'};
-    color: ${(props) => (props.variant === 'outline'? '#4caf50' : '#FFF')};
+        props.variant === 'outline'? '#FFF' : '#ff6865'};
+    color: ${(props) => (props.variant === 'outline'? '#ff4fab' : '#FFF')};
     padding: 15px 32px;
     text-align:center;
     text-decoration: none;
@@ -12,10 +12,11 @@ export const StyledButton=styled.button`
     font-size: 15px;
     cursor: pointer;
     transition: 0.5s all ease-out;
+    border-radius: 20px;
     &: hover {
         background-color: ${(props) => 
-            props.variant !== 'outline'? '#FFF' : '#4caf50'};
-        color: ${(props) => (props.variant !== 'outline'? '#4caf50' : '#FFF')};
+            props.variant !== 'outline'? '#FFF' : '#ffb3b2'};
+        color: ${(props) => (props.variant !== 'outline'? '#ffb3b2' : '#FFF')};
     }
 `
 export const FancyButton = styled(StyledButton)`

@@ -1,14 +1,17 @@
 import Patient from '../components/Patient'
 import { Form, useLoaderData } from 'react-router-dom'
 import StyledButton from '../components/Button/Button'
+import Header from '../components/Header'
 
 export default function Index(props){
     const allPatients = useLoaderData()
 
     return(
         <>
-            <h1>Blood Bank App</h1>
-            <hr/>
+            <div>
+                <Header/>
+            </div>
+
             <h3>Add a New Patient</h3>
             <Form action="/create" method="post">
                 <label htmlFor="name">
