@@ -1,5 +1,6 @@
 import { Link, Form, useLoaderData } from "react-router-dom"
 import StyledButton, { FancyButton } from '../components/Button/Button'
+import Header from '../components/Header'
 
 export default function Show(props){
 

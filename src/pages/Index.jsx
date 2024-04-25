@@ -1,10 +1,29 @@
-import Patient from '../components/Patient'
-import { Form, useLoaderData } from 'react-router-dom'
-import StyledButton from '../components/Button/Button'
-import Header from '../components/Header'
+import { useState } from 'react'; // Import useState hook for managing state
+import Patient from '../components/Patient';
+import { Form, useLoaderData } from 'react-router-dom';
+import StyledButton from '../components/Button/Button';
+import Header from '../components/Header';
+
+// Modal component
+function Modal({ isOpen, onClose, children }) {
+  if (!isOpen) return null;
+
+  return (
+    <div className="modal">
+      <div className="modal-content">
+        <span className="close" onClick={onClose}>&times;</span>
+        {children}
+      </div>
+    </div>
+  );
+}
 
 export default function Index(props){
-    const allPatients = useLoaderData()
+    const allPatients = useLoaderData();
+    const [isModalOpen, setIsModalOpen] = useState(false); // State to manage modal open/close
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
 
     return(
         <>
@@ -12,8 +31,11 @@ export default function Index(props){
                 <Header/>
             </div>
 
-            <h3>Add a New Patient</h3>
-            <Form action="/create" method="post">
+            <StyledButton onClick={openModal}>Add New Patient</StyledButton>
+            
+            <Modal isOpen={isModalOpen} onClose={closeModal}>
+              <h3>Add a New Patient</h3>
+              <Form action="/create" method="post" className="form">
                 <label htmlFor="name">
                     Patient Name:
                     <input type="text" name="name" id="name"/>
@@ -30,7 +52,7 @@ export default function Index(props){
                 </label>
 
                 <label htmlFor="mrn">
-                    Mecical Record Number:
+                    Medical Record Number:
                     <input type="number" name="mrn" id="mrn"/>
                 </label>
 
@@ -49,8 +71,12 @@ export default function Index(props){
                     <input type="text" name="antibodyID" id="antibodyID"/>
                 </label>
                 <StyledButton>Add New Patient</StyledButton>
-            </Form>
-            {allPatients.map((patient, i)=> <Patient patient={patient} key={i}/>)}
+              </Form>
+            </Modal>
+
+            <div className="patient-list">
+              {allPatients.map((patient, i)=> <Patient patient={patient} key={i}/>)}
+            </div>
         </>
-    )
+    );
 }
