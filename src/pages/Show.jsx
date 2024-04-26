@@ -103,7 +103,6 @@ const InputWrapper=styled.div`
     margin: 5px;
     font-size: 18px;
     margin: left: 0.5rem;
-    center: left;
 `
 
 const ButtonWrapper=styled.div`
