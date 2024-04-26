@@ -5,7 +5,7 @@ const headerStyle = {
     backgroundColor: 'lightblue',
     padding: '10px',
     marginBottom: '20px',
-    width: '100%', // Ensure the header spans the entire width
+    width: '100%',
   };
 
 const Header = () => {
@@ -52,7 +52,7 @@ const HeroSection = styled.section`
     }
     @media (max-width: 576px) {
         background: linear-gradient(to bottom, #0a0c2c80 3rem, transparent),
-            url(https://s7d1.scene7.com/is/image/CENODS/09532-notw3-bloodcxd?$responsive$&wid=700&qlt=90,0&resMode=sharp2);
+            url(https://www.tohoku.ac.jp/en/press/images/research20180925_t.jpg);
         background-position: center bottom;
         background-size: cover;
         align-items: flex-start;

@@ -9,7 +9,8 @@ export const StyledButton=styled.button`
     text-align:center;
     text-decoration: none;
     display: inline-block;
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
     transition: 0.5s all ease-out;
     border-radius: 20px;
