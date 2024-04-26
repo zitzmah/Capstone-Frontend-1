@@ -1,5 +1,12 @@
 import styled from "styled-components";
-//import '../Header.css'
+import '../Header.css'
+
+const headerStyle = {
+    backgroundColor: 'lightblue',
+    padding: '10px',
+    marginBottom: '20px',
+    width: '100%', // Ensure the header spans the entire width
+  };
 
 const Header = () => {
     return(
@@ -20,12 +27,13 @@ export default Header;
 
 const HeroSection = styled.section`
     background: linear-gradient(to bottom, #0a0c2c80 3rem, transparent 10rem),
-        url(https://s7d1.scene7.com/is/image/CENODS/09532-notw3-bloodcxd?$responsive$&wid=700&qlt=90,0&resMode=sharp2);
+        url(https://www.tohoku.ac.jp/en/press/images/research20180925_t.jpg);
     background-size: cover;
     height: fit-content;
-    color: black;
+    color: white;
     padding: 15rem 0rem 6rem;
     margin: 0;
+    margin-bottom: 5rem;
     width: 100%;
     box-sizing: border-box;
     .heroInner {
