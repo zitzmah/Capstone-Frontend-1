@@ -5,19 +5,6 @@ import StyledButton from '../components/Button/Button';
 import Header from '../components/Header';
 
 
-function Modal({ isOpen, onClose, children }) {
-  if (!isOpen) return null;
-
-  return (
-    <div className="modal">
-      <div className="modal-content">
-        <span className="close" onClick={onClose}>&times;</span>
-        {children}
-      </div>
-    </div>
-  );
-}
-
 export default function Index(props){
     const allPatients = useLoaderData();
     const [isModalOpen, setIsModalOpen] = useState(false); 
@@ -33,7 +20,7 @@ export default function Index(props){
 
             <StyledButton onClick={openModal}>Add New Patient</StyledButton>
             
-            <Modal isOpen={isModalOpen} onClose={closeModal}>
+
               <h3>Add a New Patient</h3>
               <Form action="/create" method="post" className="form">
                 <label htmlFor="name">
@@ -72,7 +59,7 @@ export default function Index(props){
                 </label>
                 <StyledButton>Add New Patient</StyledButton>
               </Form>
-            </Modal>
+
 
             <div className="patient-list">
               {allPatients.map((patient, i)=> <Patient patient={patient} key={i}/>)}
