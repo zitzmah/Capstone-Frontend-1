@@ -1,12 +1,15 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-export const StyledButton=styled.button`
+export const StyledButton = styled.button.attrs((props) => ({
+    // Filter out the 'variant' prop so it doesn't get passed to the DOM
+    // The rest of the props will be passed to the underlying button element
+    variant: undefined,
+}))`
     border: 2px solid #ff0500;
-    background-color: ${(props) => 
-        props.variant === 'outline'? '#FFF' : '#ff6865'};
-    color: ${(props) => (props.variant === 'outline'? '#ff4fab' : '#FFF')};
+    background-color: ${(props) => (props.variant === 'outline' ? '#FFF' : '#ff6865')};
+    color: ${(props) => (props.variant === 'outline' ? '#ff4fab' : '#FFF')};
     padding: 15px 32px;
-    text-align:center;
+    text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 18px;
@@ -14,13 +17,13 @@ export const StyledButton=styled.button`
     cursor: pointer;
     transition: 0.5s all ease-out;
     border-radius: 20px;
-    &: hover {
-        background-color: ${(props) => 
-            props.variant !== 'outline'? '#FFF' : '#ffb3b2'};
-        color: ${(props) => (props.variant !== 'outline'? '#ffb3b2' : '#FFF')};
+    &:hover {
+        background-color: ${(props) => (props.variant !== 'outline' ? '#FFF' : '#ffb3b2')};
+        color: ${(props) => (props.variant !== 'outline' ? '#ffb3b2' : '#FFF')};
     }
-`
+`;
+
 export const FancyButton = styled(StyledButton)`
     background-image: linear-gradient(to right, #f6d365 0%, #fda085 100%);
-    border:none;
-`
+    border: none;
+`;

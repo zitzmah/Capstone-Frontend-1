@@ -76,17 +76,17 @@ export default function Show(props) {
 
                     <ButtonWrapper>
                     <StyledButton>Update Patient Information</StyledButton>
-
-                    
-                    <Form action={`/delete/${id}/`} method="post">
-                        <StyledButton variant='outline'>Delete Patient Information</StyledButton>
-                    </Form>
-
                     </ButtonWrapper>
                 </Form>
 
+                <ButtonWrapper>
+                <Form action={`/delete/${id}/`} method="post">
+                        <StyledButton variant='outline'>Delete Patient Information</StyledButton>
+                    </Form>
+                </ButtonWrapper>
+
                 <Link to="/">
-                    <FancyButton as='a'>Return to Home Page</FancyButton>
+                    <FancyButton>Return to Home Page</FancyButton>
                 </Link>
             </div>
 

@@ -1,4 +1,5 @@
 const URL = import.meta.env.VITE_BASE_URL
+console.log(URL)
 
 export const indexLoader = async () => {
     const response = await fetch (`${URL}`)
