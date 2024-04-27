@@ -20,6 +20,7 @@ function Modal({ isOpen, onClose, children }) {
 
 export default function Index(props){
     const allPatients = useLoaderData();
+    console.log(allPatients)
     const [isModalOpen, setIsModalOpen] = useState(false); 
 
     const openModal = () => setIsModalOpen(true);
