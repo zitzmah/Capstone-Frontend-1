@@ -1,5 +1,5 @@
 const URL = import.meta.env.VITE_BASE_URL
-console.log(URL)
+console.log(URL, "loaders.jsx")
 
 export const indexLoader = async () => {
 
