@@ -4,6 +4,7 @@ import Index from "./pages/Index"
 import Show from "./pages/Show"
 import { indexLoader, showLoader } from "./loaders.jsx";
 import { createAction, updateAction, deleteAction } from "./actions"
+console.log("index.js")
 
 const router = createBrowserRouter(createRoutesFromElements(
     <>
@@ -16,5 +17,6 @@ const router = createBrowserRouter(createRoutesFromElements(
         </Route>
     </>
 ))
+console.log("router generated")
 
 export default router
