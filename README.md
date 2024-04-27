@@ -5,7 +5,7 @@ Currently, two official plugins are available:
 
 ### By Haley Zitzmann
 
-DEPLYOYED SITE: [Click Here]()
+DEPLYOYED SITE: [Click Here](https://662c4299a1df6c574738b296--teal-horse-06a0c7.netlify.app/)
 
 ## Description on Project
 
