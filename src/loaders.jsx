@@ -4,6 +4,7 @@ console.log(URL, "loaders.jsx")
 export const indexLoader = async () => {
 
     try{
+        console.log("loader begins")
     const response = await fetch (`${URL}`)
     const allPatients = await response.json()
     return allPatients
