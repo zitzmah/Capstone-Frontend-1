@@ -9,7 +9,7 @@ console.log("index.js")
 const router = createBrowserRouter(createRoutesFromElements(
     <>
         <Route path="/" element={<App/>}>
-            <Route path='' element={<Index/>} loader={indexLoader}/>
+            <Route path='/' element={<Index/>} loader={indexLoader}/>
             <Route path='patients/:id' element={<Show/>} loader={showLoader}/>
             <Route path="create" action={createAction}/>
             <Route path="update/:id" action={updateAction}/>
