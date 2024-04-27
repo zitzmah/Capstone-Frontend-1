@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Patient from '../components/Patient';
 import { Form, useLoaderData } from 'react-router-dom';
 import StyledButton from '../components/Button/Button';
-import Header from '../components/Header';
+// import Header from '../components/Header';
 
 
 function Modal({ isOpen, onClose, children }) {
@@ -28,7 +28,7 @@ export default function Index(props){
     return(
         <>
             <div>
-                <Header/>
+                {/* <Header/> */}
             </div>
 
             <StyledButton onClick={openModal}>Add New Patient</StyledButton>
