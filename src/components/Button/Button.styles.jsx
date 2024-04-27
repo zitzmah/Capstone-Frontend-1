@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledButton = styled.button.attrs((props) => ({
-    // Filter out the 'variant' prop so it doesn't get passed to the DOM
-    // The rest of the props will be passed to the underlying button element
+ 
     variant: undefined,
 }))`
     border: 2px solid #ff0500;
