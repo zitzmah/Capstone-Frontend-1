@@ -5,7 +5,7 @@ export const indexLoader = async () => {
 
     try{
         console.log("loader begins")
-    const response = await fetch (URL)
+    const response = await fetch (`${URL}`)
     const allPatients = await response.json()
     return allPatients
     }catch(error){
